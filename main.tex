@@ -25,6 +25,31 @@
 % Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
 
+% Review revised text
+\usepackage{soul} % Text highlighting
+\usepackage{marginnote} % Margin notes
+% Define color commands
+\newcommand{\revise}[2]{
+    \sethlcolor{yellow}\hl{#2} % Highlight revised text
+    \marginnote{\color{red}\small C#1} % Margin note with comment number
+}
+
+% Review Box
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable} % Support for spanning columns/pages
+% Define review comment annotation style
+\newcounter{reviewcounter} % Auto-numbering counter
+\newtcolorbox{reviewbox}[2][]{
+    breakable, % Support spanning columns
+    colback=blue!5!white, % Background color
+    colframe=blue!50!black, % Border color
+    title={\textbf{Revisions to Comment~#2}}, % Title (comment number)
+    fonttitle=\small,
+    left=0mm,right=0mm,top=1mm,bottom=1mm, % Margins
+    #1 % Custom parameters
+}
+
 % Useful packages
 \usepackage{cite}
 \usepackage{graphicx}
@@ -33,6 +58,7 @@
 \usepackage{booktabs}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{utils/symbols}
+
 
 \title{\LARGE \bf
 ROS4VSN: Visual Semantic Navigation in Real Robots with ROS}
