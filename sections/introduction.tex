@@ -31,14 +31,17 @@ be a radial basis function (RBF) kernel, which allows for smooth variations in t
     which determine the shape of the noise distribution. The mean function is typically set to zero, 
     and the covariance function is chosen to 
     be a radial basis function (RBF) kernel, which allows for smooth variations in the noise.
-    $$
-    % Maxwell equations
-    \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0} \\ 
-    \nabla \cdot \mathbf{B} = 0 \\ 
-    \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \\ 
-    \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
-    $$
+    \begin{gather}
+        % Maxwell equations
+        \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0} \\ 
+        \nabla \cdot \mathbf{B} = 0 \\ 
+        \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \\ 
+        \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+    \end{gather}
 \end{reviewbox}
+
+
+
 
 \begin{table}[t]
     \centering
