@@ -30,8 +30,9 @@
 \usepackage{marginnote} % Margin notes
 % Define color commands
 \newcommand{\revise}[2]{
-    \sethlcolor{yellow}\hl{#2} % Highlight revised text
-    \marginnote{\color{red}\small C#1} % Margin note with comment number
+    \textcolor{red}{#2}
+    % \protect\sethlcolor{yellow}\hl{#2} % Highlight revised text
+    \protect\marginnote{\color{red}\small C#1} % Margin note with comment number
 }
 
 % Review Box
